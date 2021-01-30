@@ -1,4 +1,6 @@
+import Link from "next/link";
 import styles from "../../styles/Home.module.scss";
+import { Button } from "@material-ui/core";
 
 export default function BlogId({ blog }) {
   return (
@@ -15,6 +17,9 @@ export default function BlogId({ blog }) {
         }}
         className={styles.post}
       />
+      <Link href="/">
+        <Button variant="contained">戻る</Button>
+      </Link>
     </main>
   );
 }
