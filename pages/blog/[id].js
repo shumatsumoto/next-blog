@@ -1,15 +1,18 @@
+import styles from "../../styles/Home.module.scss";
+
 export default function BlogId({ blog }) {
   return (
-    <main>
-      <h1>{blog.title}</h1>
+    <main className={styles.main}>
+      <h1 className={styles.title}>{blog.title}</h1>
       <p>
         <img src={blog.image.url} alt={blog.title} />
       </p>
-      <p>{blog.publishedAt}</p>
+      <p className={styles.publishedAt}>{blog.publishedAt}</p>
       <div
         dangerouslySetInnerHTML={{
           __html: `${blog.content}`,
         }}
+        className={styles.post}
       />
     </main>
   );
