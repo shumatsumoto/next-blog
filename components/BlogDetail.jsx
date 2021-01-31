@@ -11,6 +11,8 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import styles from "../styles/Blog.module.scss";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles({
   root: {
@@ -22,36 +24,38 @@ export default function ImgMediaCard({ blog }) {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={12} sm={6} md={6}>
-        <Card className={classes.root}>
-          <>
-            <CardHeader title={blog.title} subheader={blog.publishedAt} />
-            <CardMedia
-              className={styles.media}
-              component="img"
-              alt="Contemplative Reptile"
-              height="140"
-              image={blog.image.url}
-              title={blog.title}
-            />
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: `${blog.content}`,
-                  }}
-                />
-              </Typography>
-            </CardContent>
-          </>
-          <CardActions>
-            <Link href="/">
-              <Button variant="contained">戻る</Button>
-            </Link>
-          </CardActions>
-        </Card>
+    <Container fixed>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={8} md={8} className={styles.detailCard}>
+          <Card className={classes.root}>
+            <>
+              <CardHeader title={blog.title} subheader={blog.publishedAt} />
+              <CardMedia
+                className={styles.media}
+                component="img"
+                alt="Contemplative Reptile"
+                height="140"
+                image={blog.image.url}
+                title={blog.title}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `${blog.content}`,
+                    }}
+                  />
+                </Typography>
+              </CardContent>
+            </>
+            <CardActions>
+              <Link href="/">
+                <Button variant="contained">戻る</Button>
+              </Link>
+            </CardActions>
+          </Card>
+        </Grid>
       </Grid>
-    </Grid>
+    </Container>
   );
 }
