@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import styles from "../styles/Blog.module.scss";
 
 const useStyles = makeStyles({
   root: {
@@ -22,6 +23,7 @@ export default function ImgMediaCard({ blog }) {
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
+          className={styles.media}
           component="img"
           alt="Contemplative Reptile"
           height="140"

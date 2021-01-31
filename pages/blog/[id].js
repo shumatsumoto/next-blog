@@ -1,26 +1,10 @@
-import Link from "next/link";
-import styles from "../../styles/Home.module.scss";
-import { Button } from "@material-ui/core";
+import BlogDetail from "../../components/BlogDetail";
 
 export default function BlogId({ blog }) {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{blog.title}</h1>
-      <p>
-        <img src={blog.image.url} alt={blog.title} />
-      </p>
-      <p className={styles.publishedAt}>{blog.publishedAt}</p>
-      <p className="category">{blog.category && `${blog.category.name}`}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.content}`,
-        }}
-        className={styles.post}
-      />
-      <Link href="/">
-        <Button variant="contained">戻る</Button>
-      </Link>
-    </main>
+    <>
+      <BlogDetail blog={blog} />
+    </>
   );
 }
 
