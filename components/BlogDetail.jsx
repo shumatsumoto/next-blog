@@ -31,7 +31,7 @@ export default function ImgMediaCard({ blog }) {
           <Card className={classes.root}>
             <CardHeader title={blog.title} subheader={blog.publishedAt} />
             <CardMedia
-              className={styles.media}
+              className={styles.mediaDetail}
               component="img"
               alt="Contemplative Reptile"
               height="140"

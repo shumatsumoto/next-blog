@@ -23,7 +23,7 @@ export default function ImgMediaCard({ blog }) {
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
-          className={styles.media}
+          className={styles.mediaItem}
           component="img"
           alt="Contemplative Reptile"
           height="140"

@@ -17,7 +17,7 @@ export default function CenteredGrid({ blog }) {
       <Grid container spacing={3}>
         {blog.map((blog) => (
           <Grid item xs={12} sm={6} md={4}>
-            <BlogItem key={blog.id.toString()} blog={blog} />
+            <BlogItem id={blog.id} key={blog.id.toString()} blog={blog} />
           </Grid>
         ))}
       </Grid>

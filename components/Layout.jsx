@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <ButtonAppBar />
-      <Box m={4}>{children}</Box>
+      <Box>{children}</Box>
     </>
   );
 };
