@@ -13,6 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import styles from "../styles/Blog.module.scss";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
+import Chip from "@material-ui/core/Chip";
 
 const useStyles = makeStyles({
   root: {
@@ -28,26 +29,29 @@ export default function ImgMediaCard({ blog }) {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={8} md={8} className={styles.detailCard}>
           <Card className={classes.root}>
-            <>
-              <CardHeader title={blog.title} subheader={blog.publishedAt} />
-              <CardMedia
-                className={styles.media}
-                component="img"
-                alt="Contemplative Reptile"
-                height="140"
-                image={blog.image.url}
-                title={blog.title}
+            <CardHeader title={blog.title} subheader={blog.publishedAt} />
+            <CardMedia
+              className={styles.media}
+              component="img"
+              alt="Contemplative Reptile"
+              height="140"
+              image={blog.image.url}
+              title={blog.title}
+            />
+            <CardContent>
+              <Chip
+                label={blog.category ? `${blog.category.name}` : "hiyoko"}
+                color="primary"
+                variant="outlined"
               />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: `${blog.content}`,
-                    }}
-                  />
-                </Typography>
-              </CardContent>
-            </>
+              <Typography variant="body2" color="textSecondary" component="p">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `${blog.content}`,
+                  }}
+                />
+              </Typography>
+            </CardContent>
             <CardActions>
               <Link href="/">
                 <Button variant="contained">戻る</Button>
