@@ -21,21 +21,19 @@ export default function ImgMediaCard({ blog }) {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={styles.mediaItem}
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image={blog.image.url}
-          title={blog.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {blog.title}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia
+        className={styles.mediaItem}
+        component="img"
+        alt="Contemplative Reptile"
+        height="200"
+        image={blog.image.url}
+        title={blog.title}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h6" component="h2">
+          {blog.title}
+        </Typography>
+      </CardContent>
       <CardActions>
         <Link href={`blog/${blog.id}`}>
           <Button variant="contained" color="primary">
