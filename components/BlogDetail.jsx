@@ -30,7 +30,7 @@ export default function ImgMediaCard({ blog }) {
             <CardMedia
               className={styles.mediaDetail}
               component="img"
-              height="500"
+              height="300"
               alt="Contemplative Reptile"
               image={blog.image.url}
               title={blog.title}
@@ -38,7 +38,7 @@ export default function ImgMediaCard({ blog }) {
             <CardHeader title={blog.title} subheader={blog.publishedAt} />
             <CardContent>
               <Chip
-                label={blog.category ? `${blog.category.name}` : "hiyoko"}
+                label={blog.category ? `${blog.category.name}` : "general"}
                 color="primary"
                 variant="outlined"
               />
@@ -52,7 +52,7 @@ export default function ImgMediaCard({ blog }) {
             </CardContent>
             <CardActions>
               <Link href="/">
-                <Button variant="contained">戻る</Button>
+                <Button size="small">戻る</Button>
               </Link>
             </CardActions>
           </Card>
