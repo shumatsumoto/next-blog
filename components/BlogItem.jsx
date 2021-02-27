@@ -5,6 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
+import Chip from "@material-ui/core/Chip";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import styles from "../styles/Blog.module.scss";
@@ -33,7 +34,12 @@ export default function ImgMediaCard({ blog }) {
         <Typography gutterBottom variant="h6" component="h2">
           {blog.title}
         </Typography>
-        <span>{`${dayjs(blog.publishedAt).format("YYYY/MM/DD")}`}</span>
+        <div>{`${dayjs(blog.publishedAt).format("YYYY/MM/DD")}`}</div>
+        <Chip
+          label={blog.category ? `${blog.category.name}` : "general"}
+          color="primary"
+          variant="outlined"
+        />
       </CardContent>
       <CardActions>
         <Link href={`blog/${blog.id}`}>
