@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import styles from "../styles/Blog.module.scss";
+import dayjs from "dayjs";
 
 const useStyles = makeStyles({
   root: {
@@ -32,6 +33,7 @@ export default function ImgMediaCard({ blog }) {
         <Typography gutterBottom variant="h6" component="h2">
           {blog.title}
         </Typography>
+        <span>{`${dayjs(blog.publishedAt).format("YYYY/MM/DD")}`}</span>
       </CardContent>
       <CardActions>
         <Link href={`blog/${blog.id}`}>

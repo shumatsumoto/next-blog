@@ -12,6 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import styles from "../styles/Blog.module.scss";
 import Container from "@material-ui/core/Container";
 import Chip from "@material-ui/core/Chip";
+import dayjs from "dayjs";
 
 const useStyles = makeStyles({
   root: {
@@ -35,7 +36,10 @@ export default function ImgMediaCard({ blog }) {
               image={blog.image.url}
               title={blog.title}
             />
-            <CardHeader title={blog.title} subheader={blog.publishedAt} />
+            <CardHeader
+              title={blog.title}
+              subheader={`${dayjs(blog.publishedAt).format("YYYY/MM/DD H:mm")}`}
+            />
             <CardContent>
               <Chip
                 label={blog.category ? `${blog.category.name}` : "general"}
