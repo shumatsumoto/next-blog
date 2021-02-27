@@ -24,8 +24,8 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar className={styles.header} position="static" color="inherit">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            My Blog
+          <Typography variant="h6">
+            <a href="/">My Blog</a>
           </Typography>
         </Toolbar>
       </AppBar>

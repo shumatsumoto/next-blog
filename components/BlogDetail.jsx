@@ -41,12 +41,13 @@ export default function ImgMediaCard({ blog }) {
               subheader={`${dayjs(blog.publishedAt).format("YYYY/MM/DD H:mm")}`}
             />
             <CardContent>
-              <Chip
-                label={blog.category ? `${blog.category.name}` : "general"}
-                color="primary"
-                variant="outlined"
-              />
-              <Typography variant="body2" color="textSecondary" component="p">
+              <div>
+                {blog.category &&
+                  blog.category.map(({ name }) => (
+                    <span className="tag">{name}</span>
+                  ))}
+              </div>
+              <Typography variant="body2" color="textSecondary" component="div">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: `${blog.content}`,

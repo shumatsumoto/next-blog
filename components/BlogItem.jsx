@@ -34,12 +34,15 @@ export default function ImgMediaCard({ blog }) {
         <Typography gutterBottom variant="h6" component="h2">
           {blog.title}
         </Typography>
-        <div>{`${dayjs(blog.publishedAt).format("YYYY/MM/DD")}`}</div>
-        <Chip
-          label={blog.category ? `${blog.category.name}` : "general"}
-          color="primary"
-          variant="outlined"
-        />
+        <span>{`${dayjs(blog.publishedAt).format("YYYY/MM/DD")}`}</span>
+        <div>
+          {blog.category &&
+            blog.category.map(({ name }) => (
+              <span className="tag" key={name.toString()}>
+                {name}
+              </span>
+            ))}
+        </div>
       </CardContent>
       <CardActions>
         <Link href={`blog/${blog.id}`}>
