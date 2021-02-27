@@ -3,6 +3,7 @@ import BlogList from "../components/BlogList";
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
+import Head from "../components/head";
 
 const useStyles = makeStyles({
   root: {
@@ -15,6 +16,13 @@ export default function Home({ blog }) {
   const classes = useStyles();
   return (
     <>
+      <Head
+        title={"My Blog"}
+        description={"My Blogです。"}
+        keyword={"My Blog"}
+        image={"https://t-cr.jp/img.jpg"}
+        url={"https://next-blog-shu0328-shumatsumoto.vercel.app/"}
+      />
       <CssBaseline />
       <Container fixed>
         <BlogList blog={blog} />
