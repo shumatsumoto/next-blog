@@ -18,7 +18,7 @@ export default function Home({ blog }) {
     <>
       <Head
         title={"My Blog"}
-        description={"My Blogです。"}
+        description={"My Blogです"}
         keyword={"My Blog"}
         image={"https://t-cr.jp/img.jpg"}
         url={"https://next-blog-shu0328-shumatsumoto.vercel.app/"}
