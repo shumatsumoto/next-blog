@@ -44,7 +44,7 @@ export default function ImgMediaCard({ blog }) {
               <div>
                 {blog.category &&
                   blog.category.map(({ name }) => (
-                    <span className="tag">{name}</span>
+                    <span className="tag" key={name.toString()}>{name}</span>
                   ))}
               </div>
               <Typography variant="body2" color="textSecondary" component="div">
