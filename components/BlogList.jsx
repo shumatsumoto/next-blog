@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CenteredGrid({ blog }) {
+export default function BlogList({ blog }) {
   const classes = useStyles();
 
   return (
