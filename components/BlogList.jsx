@@ -16,10 +16,9 @@ export default function BlogList({ blog }) {
     <div className={classes.root}>
       <Grid container spacing={3}>
         {blog.map((blog) => (
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid key={blog.id} item xs={12} sm={6} md={4}>
             <BlogItem
               id={blog.id}
-              key={blog.id.toString()}
               blog={blog}
               publishedAt={blog.publishedAt}
             />
