@@ -4,6 +4,7 @@ import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import Head from "../components/head";
+import { Pagination } from "../components/Pagination";
 
 const useStyles = makeStyles({
   root: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Home({ blog }) {
+export default function Home({ blog, totalCount }) {
   const classes = useStyles();
   return (
     <>
@@ -27,6 +28,7 @@ export default function Home({ blog }) {
       <Container fixed>
         <BlogList blog={blog} />
       </Container>
+      <Pagination totalCount={totalCount} />
     </>
   );
 }
@@ -37,7 +39,7 @@ export const getStaticProps = async () => {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
   const data = await fetch(
-    "https://next-blog-shu0328.microcms.io/api/v1/blog",
+    "https://next-blog-shu0328.microcms.io/api/v1/blog?offset=0&limit=9",
     key
   )
     .then((res) => res.json())
@@ -45,6 +47,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       blog: data.contents,
+      totalCount: data.totalCount,
     },
   };
 };
