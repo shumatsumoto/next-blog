@@ -27,8 +27,8 @@ export default function Home({ blog, totalCount }) {
       <CssBaseline />
       <Container fixed>
         <BlogList blog={blog} />
+        <Pagination totalCount={totalCount} />
       </Container>
-      <Pagination totalCount={totalCount} />
     </>
   );
 }
