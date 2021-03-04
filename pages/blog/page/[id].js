@@ -71,7 +71,7 @@ export const getStaticProps = async (context) => {
   const data = await fetch(
     `https://next-blog-shu0328.microcms.io/api/v1/blog?offset=${
       (id - 1) * 5
-    }&limit=6`,
+    }&limit=5`,
     key
   )
     .then((res) => res.json())

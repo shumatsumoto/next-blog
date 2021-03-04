@@ -26,12 +26,12 @@ export default function ImgMediaCard({ blog }) {
   return (
     <Container fixed>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={8} md={8} className={styles.detailCard}>
+        <Grid item xs={12} sm={8} md={6} className={styles.detailCard}>
           <Card className={classes.root}>
             <CardMedia
               className={styles.mediaDetail}
               component="img"
-              height="300"
+              height="450"
               alt="Contemplative Reptile"
               image={blog.image.url}
               title={blog.title}
@@ -44,7 +44,9 @@ export default function ImgMediaCard({ blog }) {
               <div>
                 {blog.category &&
                   blog.category.map(({ name }) => (
-                    <span className="tag" key={name.toString()}>{name}</span>
+                    <span className="tag" key={name.toString()}>
+                      {name}
+                    </span>
                   ))}
               </div>
               <Typography variant="body2" color="textSecondary" component="div">
