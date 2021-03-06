@@ -45,7 +45,7 @@ export default function ImgMediaCard({ blog }) {
         </div>
       </CardContent>
       <CardActions>
-        <Link href={`blog/${blog.id}`}>
+        <Link href={`/blog/${blog.id}`}>
           <Button size="small" className={styles.detailLink}>
             詳細を見る
           </Button>
