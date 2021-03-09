@@ -37,10 +37,10 @@ export default function ImgMediaCard({ blog }) {
         <span>{`${dayjs(blog.publishedAt).format("YYYY/MM/DD")}`}</span>
         <div>
           {blog.category &&
-            blog.category.map(({ name }) => (
-              <span className="tag" key={name.toString()}>
+            blog.category.map(({ name, id }) => (
+              <a href={`/category/${id}`} className="tag" key={name.toString()}>
                 {name}
-              </span>
+              </a>
             ))}
         </div>
       </CardContent>

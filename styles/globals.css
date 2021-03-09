@@ -33,4 +33,10 @@ a {
   height: 24px;
   padding-left: 12px;
   padding-right: 12px;
+  transition: all 0.2s ease-in;
+}
+
+.tag:hover {
+  background-color: #81c784;
+  color: #fff;
 }
