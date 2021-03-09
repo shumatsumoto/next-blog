@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
   const data = await fetch(
-    "https://next-blog-shu0328.microcms.io/api/v1/blog",
+    "https://next-blog-shu0328.microcms.io/api/v1/blog?offset=0&limit=100",
     key
   )
     .then((res) => res.json())
