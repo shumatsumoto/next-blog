@@ -24,7 +24,7 @@ a {
 .tag {
   display: inline-block;
   line-height: 24px;
-  color: #388e3c;
+  color: #388e3c !important;
   border: 1px solid #81c784;
   font-size: 12px;
   margin-top: 8px;
@@ -34,9 +34,10 @@ a {
   padding-left: 12px;
   padding-right: 12px;
   transition: all 0.2s ease-in;
+  text-decoration: none !important;
 }
 
 .tag:hover {
   background-color: #81c784;
-  color: #fff;
+  color: #fff !important;
 }
