@@ -1,4 +1,5 @@
 import ButtonAppBar from "./AppBar";
+import Footer from "./Footer";
 import Box from "@material-ui/core/Box";
 
 const Layout = ({ children }) => {
@@ -6,6 +7,7 @@ const Layout = ({ children }) => {
     <>
       <ButtonAppBar />
       <Box>{children}</Box>
+      <Footer />
     </>
   );
 };
