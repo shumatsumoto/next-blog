@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -22,6 +23,7 @@ const useStyles = makeStyles({
 
 export default function ImgMediaCard({ blog }) {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <Container fixed>
@@ -62,9 +64,9 @@ export default function ImgMediaCard({ blog }) {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link href="/">
+              <span onClick={() => router.back()}>
                 <Button size="small">戻る</Button>
-              </Link>
+              </span>
             </CardActions>
           </Card>
         </Grid>
