@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: #eee;
+  background-color: #eee !important;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -14,11 +14,13 @@ a {
 
 * {
   box-sizing: border-box;
+  word-break: break-all;
 }
 
 .MuiBox-root {
   background-color: #eee;
   padding-top: 24px;
+  min-height: 82.45vh;
 }
 
 .tag {
