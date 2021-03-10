@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-
 const PER_PAGE = 5;
 
 export default function BlogPageId({ blog, totalCount }) {
@@ -40,34 +39,26 @@ export const getStaticPaths = async () => {
   const key = {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
-
   const res = await fetch(
     "https://next-blog-shu0328.microcms.io/api/v1/blog",
     key
   );
-
   const repos = await res.json();
-
   const pageNumbers = [];
-
   const range = (start, end) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
-
   const paths = range(1, Math.ceil(repos.totalCount / PER_PAGE)).map(
     (repo) => `/blog/page/${repo}`
   );
-
   return { paths, fallback: false };
 };
 
 // データを取得
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-
   const key = {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
-
   const data = await fetch(
     `https://next-blog-shu0328.microcms.io/api/v1/blog?offset=${
       (id - 1) * 5
@@ -76,7 +67,6 @@ export const getStaticProps = async (context) => {
   )
     .then((res) => res.json())
     .catch(() => null);
-
   return {
     props: {
       blog: data.contents,

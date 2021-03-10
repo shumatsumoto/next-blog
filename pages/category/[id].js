@@ -4,7 +4,6 @@ import BlogList from "../../components/BlogList";
 
 export default function CategoryId({ blog }) {
   const router = useRouter();
-  console.log(router.query.id);
 
   return (
     <>
