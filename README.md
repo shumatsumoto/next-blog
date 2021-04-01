@@ -11,6 +11,9 @@
   <a href="https://nextjs.org/">
     <img src="https://user-images.githubusercontent.com/11171872/113247237-92a71b80-92f5-11eb-8f09-6047f4c4b441.png" height="90">
   </a>&nbsp;
+  <a href="https://material-ui.com/">
+    <img src="https://user-images.githubusercontent.com/11171872/113247805-b159e200-92f6-11eb-86c9-c11d4c5600e7.png" height="90">
+  </a>&nbsp;
 </div>
 
 ## :computer: URL
