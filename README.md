@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/11171872/113237475-dabc4300-92e1-11eb-9396-2c8968544e43.gif" width="600">
+</div>
 
-## Getting Started
+<h1 align="center">Rails Blog</h1>
 
-First, run the development server:
+<div align="center">
+  <a href="https://railsguides.jp/6_0_release_notes.html">
+    <img src="https://user-images.githubusercontent.com/11171872/113230027-27e4e880-92d3-11eb-8a73-13b4d438c17c.jpg" height="90">
+  </a>&nbsp;
+  <a href="https://semantic-ui.com/">
+    <img src="https://user-images.githubusercontent.com/11171872/113229785-9b3a2a80-92d2-11eb-9667-5cea7839423c.png" height="90">
+  </a>&nbsp;
+  <a href="https://www.heroku.com/">
+    <img src="https://user-images.githubusercontent.com/11171872/113230337-c7a27680-92d3-11eb-9e94-c131dfba8f1d.png" height="90">
+  </a>
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
+## :computer: URL
+
+https://......
+
+## :pencil2: Overview
+
+I'm using Rails 6 rich text.
+I created a simple SNS application.
+
+## :hammer: Requirement
+
+- macOS
+- Rails 6.0.3.5
+- [Semantic UI](https://semantic-ui.com/)
+
+## :pushpin: Usage
+
+Git clone
 ```
+$ git clone https://github.com/shumatsumoto/rails-blog.git
+```
+Move to directory
+```
+$ cd rails-blog
+```
+Install the library
+```
+$ bundle install
+```
+Launch a local server
+```
+$ rails s
+```
+Access URL： 
+http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :railway_car: Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Article posting
+- Likes
+- Rich text
+- Login / Logout
+- SignUp
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## :green_book: Reference
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [rails6 deviseを使用する](https://mebee.info/2021/03/30/post-27697/)
+- [Railsでいいね機能を実装しよう](https://qiita.com/nojinoji/items/2c66499848d882c31ffa)
+- [[Ruby on Rails 6] Action Textでリッチテキスト機能を導入してみよう!](https://www.web-knowledge-info.com/wp/ruby-on-rails32/)
 
-## Learn More
+## :hatching_chick: Author
 
-To learn more about Next.js, take a look at the following resources:
+- [Github](https://github.com/shumatsumoto)
+- [Qiita](https://qiita.com/ShuMatsumoto)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## :credit_card: Licence
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[MIT](https://......)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
