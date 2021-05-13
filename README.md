@@ -7,16 +7,16 @@
 
 <div align="center">
   <a href="https://microcms.io/">
-    <img src="https://user-images.githubusercontent.com/11171872/113247112-49ef6280-92f5-11eb-8fcb-18331e51193d.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/113247112-49ef6280-92f5-11eb-8fcb-18331e51193d.png" height="55">
   </a>&nbsp;
   <a href="https://nextjs.org/">
-    <img src="https://user-images.githubusercontent.com/11171872/113247237-92a71b80-92f5-11eb-8f09-6047f4c4b441.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/113247237-92a71b80-92f5-11eb-8f09-6047f4c4b441.png" height="55">
   </a>&nbsp;
   <a href="https://vercel.com/docs">
-    <img src="https://user-images.githubusercontent.com/11171872/113248066-334a0b00-92f7-11eb-86d9-cd8030b50c0e.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/113248066-334a0b00-92f7-11eb-86d9-cd8030b50c0e.png" height="55">
   </a>&nbsp;
   <a href="https://material-ui.com/">
-    <img src="https://user-images.githubusercontent.com/11171872/113247805-b159e200-92f6-11eb-86c9-c11d4c5600e7.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/113247805-b159e200-92f6-11eb-86c9-c11d4c5600e7.png" height="55">
   </a>
 </div>
 
